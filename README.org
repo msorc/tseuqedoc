@@ -1,0 +1,6 @@
+* Task setting notes
+The problem with parsing matches results basically described by the following string "2 - 2 2 - 2 2 - 2 2 - 2 2 - 2". Using regexp does not make possible to define which is the team name "2 - 2" or "2 - 2 2 - 2" and so on.
+The reasonable solution would be to use the list of available teams for string parsing. The tokenization will be a bit more complex than a simple regexp then. Since the assignment descripiption gives no details, lets go the simplest way.
+* Implementation
+The main concern is the usage of LeagueTable#matches. The assignment describes only #push method but does not describe what to do with array destructive operations. E.g. when some match results needs to be altered or even removed (e.g. team was disqualified).
+
